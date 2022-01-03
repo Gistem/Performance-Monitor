@@ -3,7 +3,8 @@ function drawCircle(canvas, currentLoad) {
     let context = canvas.getContext("2d");
     // Draw Inner Circle
     context.clearRect(0, 0, 500, 500);
-    context.fillStyle = "#ccc";
+    context.fillStyle = "#777";
+    context.shadowBlur = 7;
     context.beginPath();
     context.arc(100, 100, 90, Math.PI * 0, Math.PI * 2);
     context.closePath();
@@ -14,10 +15,13 @@ function drawCircle(canvas, currentLoad) {
     context.lineWidth = 10;
     if (currentLoad < 20) {
       context.strokeStyle = "#00ff00";
+      context.shadowColor = 10;
     } else if (currentLoad < 40) {
       context.strokeStyle = "#337ab7";
+      context.shadowColor = 20;
     } else if (currentLoad < 60) {
       context.strokeStyle = "#f0ad4e";
+      context.shadowColor = 30;
     } else {
       context.strokeStyle = "#d9534f";
     }

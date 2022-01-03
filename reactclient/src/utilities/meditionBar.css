@@ -1,0 +1,76 @@
+.box {
+  position: relative;
+  width: 240px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 1;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(25px);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.meditioner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.box h3 {
+  color: #3f3f3f;
+  font-weight: 500;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+}
+.barShape {
+  position: relative;
+  width: 140px;
+  height: 65px;
+  margin: 20px 0;
+  border: 3px solid #333;
+  border-radius: 10px;
+}
+.barShape::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -12px;
+  transform: translateY(-50%);
+  width: 7px;
+  height: 16px;
+  background: #333;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.barShape::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+.level {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  background: none;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.percentage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #0f0, rgb(255, 217, 0));
+}

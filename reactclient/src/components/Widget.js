@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Cpu from "./Cpu";
 import Mem from "./Mem";
 import Info from "./Info";
@@ -35,9 +35,9 @@ function Widget(value) {
   return (
     <div className="widget col-sm-12">
       {notActiveDiv}
+      <Info infoData={info} />
       <Cpu cpuData={cpu} />
       <Mem memData={mem} />
-      <Info infoData={info} />
     </div>
   );
 }
